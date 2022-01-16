@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      href="./lib/materializecss/css/materialize.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>App Notes</title>
+  </head>
+  <body class="bckg_img">
+    <nav class="cyan lighten-1">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">App Notes</a>
+        <a
+          href="#"
+          data-target="slide-out"
+          class="sidenav-trigger show-on-large"
+          ><i class="material-icons">menu</i></a
+        >
+      </div>
+    </nav>
+
+    <ul id="slide-out" class="sidenav">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img
+              class="img_user_class"
+              id="user_img"
+              src="./assets/img/bcgUser.jpeg"
+            />
+          </div>
+          <a href=""></a>
+          <a href="/views/user.html">
+            <span class="white-text name" id="user_name"></span>
+          </a>
+          <a href=""><span class="white-text email"></span></a>
+        </div>
+      </li>
+      <li>
+        <a href="#!"><i class="material-icons">home</i>Home</a>
+      </li>
+      <li><div class="divider"></div></li>
+      <li>
+        <a href="/views/archive.html"
+          ><i class="material-icons">archive</i>Arquivo</a
+        >
+      </li>
+    </ul>
+
+    <!-- Page Layout here -->
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <br />
+        <div class="row" id="allNotes">
+          <h5 class="col s6 m3 no_notes">Sem notas...</h5>
+        </div>
+      </div>
+
+      <!-- Modal Trigger -->
+      <a
+        class="btn-floating btn-large cyan pulse fixed_action_btn modal-trigger"
+        href="#modalAddNote"
+        ><i class="material-icons">add</i></a
+      >
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modalAddNote" class="modal">
+      <div class="modal-content">
+        <h4>Adicionar nota</h4>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input
+                  id="titleNote"
+                  type="text"
+                  class="validate"
+                  min="3"
+                  required
+                  onchange="changeStateBtnModal(this.value)"
+                />
+                <label for="titleNote">Título da Nota</label>
+                <span
+                  class="helper-text"
+                  data-error="Mínimo 3 caracteres"
+                  data-success="Válido"
+                  >Mínimo 3 caracteres</span
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-close waves-effect waves-green btn-small btn-flat">
+          Cancelar
+        </button>
+        <button
+          type="submit"
+          id="addNote"
+          onclick="addNote()"
+          class="modal-close waves-effect waves-green btn-small disabled"
+        >
+          Adicionar
+        </button>
+      </div>
+    </div>
+
+    <!-- Import materialize.js -->
+    <script src="./lib/materializecss/js/materialize.min.js"></script>
+    <!-- sweetalert2 -->
+    <script src="../lib/sweetalert2/sweetalert2@11.js"></script>
+    <!-- Script -->
+    <script src="./js/functionNote.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.bckg_img {
+  background: url('./assets/img/bg20.svg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.img_user_class {
+  height: 150px !important;
+  width: 100%;
+  margin-top: -53px;
+}
+
+.fixed_action_btn {
+  position: fixed;
+  right: 23px;
+  bottom: 23px;
+  padding-top: 15px;
+  margin-bottom: 0;
+  z-index: 997;
+}
+
+.no_notes {
+  color: rgba(0, 0, 0, 0.22);
+  font-style: italic;
+}
+
+.create_note_text {
+  font-size: 0.9rem;
+}

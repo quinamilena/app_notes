@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      href="../lib/materializecss/css/materialize.min.css"
+    />
+
+    <!-- simplemde -->
+    <link rel="stylesheet" href="../lib/simplemde/simplemde.min.css" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/editNote.css" />
+
+    <title>Editar Nota</title>
+  </head>
+  <body>
+    <nav class="cyan lighten-1">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Editar Nota</a>
+        <a
+          href="#"
+          data-target="slide-out"
+          class="sidenav-trigger show-on-large"
+          ><i class="material-icons">menu</i></a
+        >
+      </div>
+    </nav>
+
+    <ul id="slide-out" class="sidenav">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img
+              class="img_user_class"
+              id="user_img"
+              src="../assets/img/bcgUser.jpeg"
+            />
+          </div>
+          <a href=""></a>
+          <a href="/views/user.html">
+            <span class="white-text name" id="user_name"></span>
+          </a>
+          <a href=""><span class="white-text email"></span></a>
+        </div>
+      </li>
+      <li>
+        <a href="../index.html"><i class="material-icons">home</i>Home</a>
+      </li>
+      <li><div class="divider"></div></li>
+      <li>
+        <a href="/views/archive.html"
+          ><i class="material-icons">archive</i>Arquivo</a
+        >
+      </li>
+    </ul>
+
+    <!-- Page Layout here -->
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <br />
+        <div class="row" id="allNotes">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s11">
+                <input id="title_note" type="text" />
+                <label for="title_note">Título da Nota</label>
+              </div>
+
+              <div class="input-field col s1 alinha_btn">
+                <button
+                  class="btn-floating waves-effect waves-light red"
+                  id="inactive_note"
+                >
+                  <i class="material-icons">delete</i>
+                </button>
+              </div>
+
+              <div class="input-field col s12">
+                <textarea
+                  id="body_note"
+                  class="materialize-textarea"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="row fixed_action_btn">
+              <div class="col s12">
+                <a
+                  class="waves-effect waves-light btn-small btn-flat"
+                  href="../index.html"
+                >
+                  <i class="material-icons left">arrow_back</i>Cancelar
+                </a>
+                <button
+                  class="waves-effect waves-light btn-small"
+                  id="btn_save"
+                  type="submit"
+                >
+                  <i class="material-icons left">save</i>Salvar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Import materialize.js -->
+    <script src="../lib/materializecss/js/materialize.min.js"></script>
+    <!-- simplemde  -->
+    <script src="../lib/simplemde/simplemde.min.js"></script>
+    <!-- sweetalert2 -->
+    <script src="../lib/sweetalert2/sweetalert2@11.js"></script>
+    <!-- Files -->
+    <script src="../js/functionNote.js"></script>
+    <script src="../js/editNote.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "app-notes",
+  "version": "1.0.0",
+  "description": "Um aplicativo de notas, criar e armazenar qualquer uma de suas notas para uso posterior.",
+  "main": "script.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "npx http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Milena Quina",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.0"
+  }
+}
